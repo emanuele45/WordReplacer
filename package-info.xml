@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<license><![CDATA[
+/**
+ * Word Replacer
+ * From time to time is better to separate word censoring and word replacement
+ * Replaces text only in the bodies
+ *
+ * @package WRR
+ * @author emanuele
+ * @copyright 2014 emanuele
+ * @license   BSD http://opensource.org/licenses/BSD-3-Clause
+ *
+ * Part of the code is:
+ * @copyright 2011 Simple Machines
+ * @license http://www.simplemachines.org/about/smf/license.php BSD
+ */
+	]]></license>
+
+	<id>emanuele:word_replacer</id>
+	<version>0.1.0</version>
+	<name>Word Replacer</name>
+	<type>modification</type>
+	<install for="1.0 beta 2, 1.0 - 1.0.99">
+		<require-file name="WordReplacer.php" destination="SOURCEDIR" />
+		<require-file name="WordReplacer.template.php" destination="$themedir" />
+		<require-file name="Wordreplacer.english.php" destination="LANGUAGEDIR/english" />
+		<code>install.php</code>
+		<redirect url="?action=admin;area=addonsettings;sa=wordreplacer" />
+	</install>
+	<uninstall for="1.0 beta 2, 1.0 - 1.0.99">
+		<remove-file name="SOURCEDIR/WordReplacer.php" />
+		<remove-file name="$themedir/WordReplacer.template.php" />
+		<remove-file name="LANGUAGEDIR/english/WordReplacer.english.php" />
+		<code>install.php</code>
+	</uninstall>
+</package-info>
