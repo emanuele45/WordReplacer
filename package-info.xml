@@ -19,19 +19,19 @@
 	]]></license>
 
 	<id>emanuele:word_replacer</id>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 	<name>Word Replacer</name>
 	<type>modification</type>
-	<install for="1.0 beta 2, 1.0 - 1.0.99">
+	<install for="1.0 RC1 - 1.0.99">
 		<require-file name="WordReplacer.php" destination="SOURCEDIR" />
-		<require-file name="WordReplacer.template.php" destination="$themedir" />
+		<require-file name="WordReplacer.template.php" destination="THEMEDIR" />
 		<require-file name="Wordreplacer.english.php" destination="LANGUAGEDIR/english" />
 		<code>install.php</code>
 		<redirect url="?action=admin;area=addonsettings;sa=wordreplacer" />
 	</install>
-	<uninstall for="1.0 beta 2, 1.0 - 1.0.99">
+	<uninstall for="1.0 RC1 - 1.0.99">
 		<remove-file name="SOURCEDIR/WordReplacer.php" />
-		<remove-file name="$themedir/WordReplacer.template.php" />
+		<remove-file name="THEMEDIR/WordReplacer.template.php" />
 		<remove-file name="LANGUAGEDIR/english/WordReplacer.english.php" />
 		<code>install.php</code>
 	</uninstall>
